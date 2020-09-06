@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1090_APOSTOL_VladEugen</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <script src="lib/smoothie.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="video-player">
+        <h1 id="videoTitle"></h1>
+        <video id="video" src="media/sample1.mp4" onended="nextVideo(this.src)">
+          <track
+            lable="English"
+            kind="subtitles"
+            src="media/sample4srt.json"
+            srclang="en"
+            default
+          />
+        </video>
+        <canvas id="videoCanvas"> </canvas>
+        <canvas id="controlsCanvas"> </canvas>
+        <canvas id="progressBarCanvas"></canvas>
+      </div>
+      <div class="playlist">
+        <ol>
+          <li>
+            <img
+              src="media/sample1.jpg"
+              alt="Sample1"
+              title="Sample 1"
+              onclick="changeVideoSource(this.src)"
+            />
+          </li>
+          <li>
+            <img
+              src="media/sample2.jpg"
+              alt="Sample2"
+              title="Sample 2"
+              onclick="changeVideoSource(this.src)"
+            />
+          </li>
+          <li>
+            <img
+              src="media/sample3.jpg"
+              alt="Sample3"
+              title="Sample 3"
+              onclick="changeVideoSource(this.src)"
+            />
+          </li>
+          <li>
+            <img
+              src="media/sample4.jpg"
+              alt="Sample4"
+              title="Sample 4"
+              onclick="changeVideoSource(this.src)"
+            />
+          </li>
+        </ol>
+      </div>
+      <div class="effects">
+        <a
+          href="#"
+          id="btnScreenshot"
+          download="videoPlayerScreenshot.png"
+          onclick="screenshot()"
+          >Screenshot</a
+        >
+        <button id="btnSepia" onclick="sepia()">Sepia</button>
+        <button id="btnBlackwhite" onclick="blackAndWhite()">
+          Black&White
+        </button>
+        <button id="btnInvert" onclick="invert()">Invert</button>
+        <button id="btnClear" onclick="no_filter()">Clear</button>
+      </div>
+      <canvas id="histogram" width="400" height="100"></canvas>
+    </div>
+  </body>
+</html>

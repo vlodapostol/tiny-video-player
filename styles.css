@@ -1,0 +1,71 @@
+body {
+  background: #131313;
+  min-width: 615px;
+}
+
+.video-player {
+  display: inline-block;
+  width: 70%;
+  position: relative;
+  margin-left: 5px;
+}
+
+#video {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+#videoCanvas {
+  width: 100%;
+  z-index: 0;
+  position: relative;
+}
+
+#controlsCanvas {
+  position: relative;
+  bottom: 34px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+#progressBarCanvas {
+  position: absolute;
+  bottom: 38px;
+  opacity: 75%;
+  background: white;
+}
+
+.playlist {
+  display: inline-block;
+  position: absolute;
+  top: 7.5%;
+  width: 28%;
+  margin-left: 5px;
+}
+
+#videoTitle {
+  color: white;
+  font-family: sans-serif;
+}
+
+ol {
+  list-style-type: none;
+}
+
+img {
+  width: 150px;
+  border: 1px ivory solid;
+  margin: 2px;
+}
+
+img:hover {
+  box-shadow: 0 0 5px 5px rgba(137, 223, 245, 0.5);
+}
+
+track {
+  z-index: 20;
+}
